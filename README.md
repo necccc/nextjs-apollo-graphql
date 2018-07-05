@@ -38,3 +38,8 @@ If you have a [now](https://zeit.co/now/) account active on your desktop, you ca
 ```bash
 npm run deploy
 ```
+
+### Note on deployment & docker images
+This setup creates two docker images, one for the app, using Alpine Node images, the other one is for static assets using nginx.
+
+With this, I would like to demonstrate a near-real-life deployment, to a CDN, or any cluster for static assets.
