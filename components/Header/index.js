@@ -10,7 +10,7 @@ class Header extends React.Component {
       <nav className="nav bx--grid">
         <ul className="bx--row">
         <li className="bx--col-lg-1">
-            <Link to="index">
+            <Link to="/">
               <a className="navLink">Home</a>
             </Link>
           </li>
@@ -18,7 +18,7 @@ class Header extends React.Component {
               <a className="navLink">API</a>
           </li>
           <li className="bx--col-lg-1">
-            <Link to="about">
+            <Link to="/about">
               <a className="navLink">About</a>
             </Link>
           </li>
