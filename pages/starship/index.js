@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Link from '../../components/Link'
 import Layout from '../../layouts/Default'
 import Title from '../../components/Title'
@@ -19,6 +20,9 @@ class Starship extends React.Component {
 		const { id, data: { loading, Starship }} = this.props
 
 		return <Layout>
+			<Head>
+        		<title>{Starship.name} - Star Wars Library</title>
+      		</Head>
 			<DetailPage>
 				<Breadcrumbs items={[
 					{ path: '/', label: 'Home'},

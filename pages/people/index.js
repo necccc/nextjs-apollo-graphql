@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Layout from '../../layouts/Default'
 import ListPage from '../../components/ListPage'
 
@@ -42,6 +43,9 @@ class People extends React.Component {
 		}
 
 		return <Layout>
+			<Head>
+        		<title>{title} - Star Wars Library</title>
+      		</Head>
 			<ListPage
 				onPagerChange={ onPagerChange }
 				page={ page }

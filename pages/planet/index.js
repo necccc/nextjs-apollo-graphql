@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Layout from '../../layouts/Default'
 import Title from '../../components/Title'
 import DetailPage from '../../components/Detail/Page'
@@ -18,6 +19,9 @@ class Planet extends React.Component {
 		const { id, data: { loading, Planet }} = this.props
 
 		return <Layout>
+			<Head>
+        		<title>{Planet.name} - Star Wars Library</title>
+      		</Head>
 			<DetailPage>
 				<Breadcrumbs items={[
 					{ path: '/', label: 'Home'},

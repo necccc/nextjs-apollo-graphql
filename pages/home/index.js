@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Layout from '../../layouts/Default'
 import Title from '../../components/Title'
 import Topic from '../../components/Topic'
@@ -10,7 +11,9 @@ class Index extends React.Component {
     const { allPlanets, allVehicles, allPersons, allStarships, loading } = this.props
 
     return <Layout>
-      
+      <Head>
+        <title>Star Wars Library</title>
+      </Head>
       <Title>
         Star Wars library
       </Title>
