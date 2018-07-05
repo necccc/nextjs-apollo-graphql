@@ -1,0 +1,21 @@
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_colors.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layer.scss';
+@import 'node_modules/carbon-components/scss/components/button/_button.scss';
+
+.topic {
+	padding: $spacing-lg;
+	background: $color__white;
+	@include layer('raised');
+
+
+	h2 {
+		margin-bottom: $spacing-xl;
+	}
+}
+.topic-list {
+	margin-bottom: $spacing-xl;
+}
+.topic-list-item {
+	margin-bottom: $spacing-sm;
+}

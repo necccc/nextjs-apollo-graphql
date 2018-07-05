@@ -1,0 +1,42 @@
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_colors.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layer.scss';
+
+@import 'node_modules/carbon-components/scss/globals/grid/_grid.scss';
+
+.detail-page {
+	padding-bottom: $spacing-3xl;
+}
+
+.breadcrumbs {
+	margin-bottom: $spacing-xl;
+}
+
+.item-data {
+	background: $color__white;
+	@include layer('raised');
+	padding:  $spacing-xl;
+	margin-bottom: $spacing-lg;
+
+	h3 {
+		margin-bottom: $spacing-lg;
+	}
+}
+
+
+.item-image {
+	img,
+	.item-image-skeleton {
+		width: 100%;
+		margin-bottom: $spacing-sm;
+	}
+
+	.item-image-skeleton {
+		background: $color__gray-1;
+		height: 250px;
+	}
+}
+
+.bx--row.item-page {
+	margin-bottom: $spacing-3xl;
+}

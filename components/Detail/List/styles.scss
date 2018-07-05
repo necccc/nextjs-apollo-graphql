@@ -1,0 +1,18 @@
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_colors.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layer.scss';
+@import 'node_modules/carbon-components/scss/components/skeleton/_skeleton.scss';
+
+.item-image {
+	img,
+	.item-image-skeleton {
+		width: 100%;
+		margin-bottom: $spacing-sm;
+	}
+
+	.item-image-skeleton {
+		background: $color__gray-1;
+		height: 250px;
+	}
+}
+

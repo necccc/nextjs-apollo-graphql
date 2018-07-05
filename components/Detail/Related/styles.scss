@@ -1,0 +1,51 @@
+@import 'node_modules/carbon-components/scss/components/button/_button.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_colors.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layer.scss';
+
+
+.details-related {
+
+	.details__load-more {
+		margin-top: $spacing-sm;
+	}
+
+	ul {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-column-gap: $spacing-sm;
+		grid-row-gap: $spacing-sm;
+
+		li {
+			height: 3rem;
+			background-color: $color__navy-gray-8;
+			position: relative;
+
+			overflow: hidden;
+			line-height: 3rem;
+
+			.related-link {
+				width: 100%;
+				height: 100%;
+				padding-left: calc(3rem + #{$spacing-sm});
+				display: block;
+				text-decoration: none;
+
+				&:hover {
+					background-color: $color__blue-51;
+					color: $color__white;
+				}
+			}
+
+			.related-image-link {
+				height: 3rem;
+				width: 3rem;
+				position: absolute;
+				left: 0;
+				display: block;
+				background-size: cover;
+				background-position: top center;
+			}
+		}
+	}
+}

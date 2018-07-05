@@ -1,0 +1,26 @@
+$css--font-face: true !default;
+$css--helpers: true !default;
+$css--body: true !default;
+$css--use-experimental-grid: false !default;
+$css--use-experimental-grid-fallback: false !default;
+$css--use-layer: true !default;
+$css--reset: true !default;
+$css--typography: true !default;
+$css--plex: true !default;
+
+@import 'node_modules/carbon-components/scss/globals/scss/_colors.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_vars.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_mixins.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layout.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layer.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_typography.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_import-once.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_css--reset.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_css--font-face.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_css--helpers.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_css--body.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_css--typography.scss';
+@import 'node_modules/carbon-components/scss/globals/grid/_grid.scss';
+
+@import 'node_modules/carbon-components/scss/components/footer/_footer.scss';

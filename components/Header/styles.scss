@@ -1,0 +1,14 @@
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_colors.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layer.scss';
+
+.header {
+	padding: $spacing-lg 0;
+	margin-bottom: $spacing-3xl;
+	background: $color__navy-gray-6;
+	@include layer('overlay');
+}
+
+.navLink {
+	color: $color__white;
+}

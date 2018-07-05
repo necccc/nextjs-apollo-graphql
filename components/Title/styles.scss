@@ -1,0 +1,8 @@
+@import 'node_modules/carbon-components/scss/globals/scss/_typography.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+
+.page-title,
+h1.page-title {
+	@include font-size('54');
+	margin-bottom: $spacing-2xl;
+}
