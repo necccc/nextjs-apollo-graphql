@@ -1,0 +1,28 @@
+@import 'node_modules/carbon-components/scss/globals/scss/_spacing.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_colors.scss';
+@import 'node_modules/carbon-components/scss/globals/scss/_layer.scss';
+
+@import 'node_modules/carbon-components/scss/globals/scss/_css--typography.scss';
+
+.static-text {
+	background: $color__white;
+	padding: $spacing-xl;
+	margin-bottom: $spacing-xl;
+	@include layer('raised');
+
+	p, ul {
+		margin-bottom: $spacing-lg;
+	}
+
+	li {
+		margin-bottom: $spacing-sm;
+	}
+
+	ul {
+		padding-left: $spacing-lg;
+
+		li {
+			list-style: square;
+		}
+	}
+}

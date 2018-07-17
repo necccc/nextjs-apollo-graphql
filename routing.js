@@ -11,6 +11,7 @@ const routes = {
 	'/planet/:id': 'planet',
 	'/species': 'specieslist',
 	'/species/:id': 'species',
+	'/demo': 'demo'
 }
 
 module.exports = () => routes

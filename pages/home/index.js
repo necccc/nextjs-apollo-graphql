@@ -4,11 +4,11 @@ import Layout from '../../layouts/Default'
 import Title from '../../components/Title'
 import Topic from '../../components/Topic'
 
-import state from './state'
+import withData from './data'
 
 class Index extends React.Component {
   render() {
-    const { allPlanets, allVehicles, allPersons, allStarships, loading } = this.props
+    const { planets, vehicles, persons, starships, loading } = this.props
 
     return <Layout>
       <Head>
@@ -23,7 +23,7 @@ class Index extends React.Component {
           title="People"
           type="person"
           types="people"
-          data={ allPersons }
+          data={ persons }
           loading={ loading }
         />
 
@@ -31,7 +31,7 @@ class Index extends React.Component {
           title="Starships"
           type="starship"
           types="starships"
-          data={ allStarships }
+          data={ starships }
           loading={ loading }
         />
 
@@ -39,7 +39,7 @@ class Index extends React.Component {
           title="Planets"
           type="planet"
           types="planets"
-          data={ allPlanets }
+          data={ planets }
           loading={ loading }
         />
 
@@ -47,7 +47,7 @@ class Index extends React.Component {
           title="Vehicles"
           type="vehicle"
           types="vehicles"
-          data={ allVehicles }
+          data={ vehicles }
           loading={ loading }
         />
       </div>
@@ -55,4 +55,4 @@ class Index extends React.Component {
   }
 }
 
-export default state(Index)
+export default withData(Index)

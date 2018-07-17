@@ -6,38 +6,13 @@ import withData from './data'
 
 class SpeciesList extends React.Component {
 
-	static getDerivedStateFromProps(props, state) {
-		const { data: { loading }} = props
-
-		let page = 1
-
-		if (state && typeof state.page !== 'undefined') {
-			page = state.page
-		}
-
-		return {
-			page,
-			loading
-		}
-	}
-
 	render() {
 		const type = "species"
 		const title = "Species"
 
-		const { page, loading } = this.state
-		const { loadPage, data }  = this.props
-
-		const items = data[`all${ title }`]
-
-		let count = 0
-
-		if (!loading) {
-			count = data[`_all${ title }Meta`].count
-		}
+		const { loading, data, page, count, loadPage} = this.props
 
 		const onPagerChange = ({page}) => {
-			this.setState({ loading: true , page })
 			loadPage(page)
 		}
 
@@ -50,7 +25,7 @@ class SpeciesList extends React.Component {
 				page={ page }
 				count={ count }
 				loading={ loading }
-				data={ items }
+				data={ data }
 				type={ type }
 				title={ title }
 			/>

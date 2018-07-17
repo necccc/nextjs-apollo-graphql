@@ -15,9 +15,9 @@ export default {
 		Species: (_, args, { getCacheKey }) => {
 			return getCacheKey({ __typename: 'Species', id: args.id })
 		},
-		allVehicles: (_, args, { getCacheKey }) => {
+		personPages: (_, args, { getCacheKey }) => {
 			let page = args ? args.page : 1
-			return getCacheKey({ __typename: 'allVehicles', page })
+			return getCacheKey({ __typename: 'personPages', page })
 		}
     },
   }

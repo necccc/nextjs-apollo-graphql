@@ -1,6 +1,6 @@
 # nextjs-apollo-graphql
 
-[See it in action here](https://starwars-app-bwqfibzdqs.now.sh)
+[See it in action here](http://bit.ly/starwars-graphql-nextjs)
 
 This is a small, proof-of-concept site, fetching and displaying data from the Star Wars API over GraphQL.
 

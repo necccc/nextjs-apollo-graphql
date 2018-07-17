@@ -1,15 +1,16 @@
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
-import { basicOptions } from '../../data/detailsCommon'
+import { basicOptions, listPageUpdateQuery } from '../../data/detailsCommon'
 
 export const speciesBasic = gql`
 	query speciesBasic($page: Int = 1) {
-		allSpecies(page: $page) {
-			name
-			id
-		}
-		_allSpeciesMeta {
+		speciesPages(page: $page) {
+			page
 			count
+			items {
+				name
+				id
+			}
 		}
 	}
 `
@@ -17,21 +18,18 @@ export const speciesBasic = gql`
 export default graphql(speciesBasic, {
 	options: basicOptions.options,
 	props: ({data, ownProps}) => {
-		const { fetchMore } = data
+
+		const { loading, fetchMore, speciesPages = {} } = data
+		const { page = 1, count = 0, items = [] } = speciesPages
 
 		const loadPage = (page) => {
 			return fetchMore({
 				variables: {
 					page
 				},
-				updateQuery: (prev, { variables, fetchMoreResult }) => {
-
-						if (!fetchMoreResult) return prev;
-
-						return Object.assign({}, fetchMoreResult)
-					}
+				updateQuery: listPageUpdateQuery
 			})
 		}
-		return Object.assign({}, ownProps, { data, loadPage })
+		return Object.assign({}, ownProps, { data: items, page, count, loadPage, loading })
 	}
 })

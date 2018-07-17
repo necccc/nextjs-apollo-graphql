@@ -5,7 +5,7 @@ import css from "./styles.scss"
 export default (props) => (
 	<Breadcrumb className="breadcrumbs">
 		{props.items.map(({ path, label, params = {}}) => (
-			<Link to={ path } { ...params }>
+			<Link to={ path } { ...params } key={ path }>
 				<BreadcrumbItem>
 					<span>{ label }</span>
 				</BreadcrumbItem>
