@@ -31,9 +31,7 @@ export const speciesFull = gql`
 				name
 				picture
 			}
-			_peopleMeta {
-				count
-			}
+			peopleCount
     }
   }
 `

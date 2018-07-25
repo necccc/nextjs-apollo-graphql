@@ -16,7 +16,10 @@ export const getStarships = gql`
 `
 
 const List = (props) => (<div>
-	{ props.loading ? 'LOADING' : '' }
+	{
+		// do something meaningful during loading
+		props.loading ? 'LOADING' : ''
+	}
 	<ul>
 		{
 			props.data.map( item => (<li key={item.id}>
@@ -35,26 +38,23 @@ export default graphql(getStarships, {
 		},
 	},
 	props: ({data, ownProps}) => {
-
 		const {
 			fetchMore,
-			allStarships,
+			starshipPages: { items, page },
 			loading
 		} = data
 
 		const newProps = {
 			loading,
-			data: allStarships.items,
-			page: allStarships.page,
+			page,
+			data: items,
 			loadPage: (nextPage) => {
 				return fetchMore({
 					variables: {
 						page: nextPage
 					},
 					updateQuery: (prev, { variables, fetchMoreResult }) => {
-
 						if (!fetchMoreResult) return prev;
-
 						return Object.assign({}, fetchMoreResult, { variables })
 					}
 				})

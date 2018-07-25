@@ -26,8 +26,7 @@ class Starship extends React.Component {
 			<DetailPage>
 				<Breadcrumbs items={[
 					{ path: '/', label: 'Home'},
-					{ path: '/starships', label: 'Starships'},
-					{ path: '/starship/:id', params: { id: Starship.id }, label: Starship.name }
+					{ path: '/starships', label: 'Starships'}
 				]} />
 
 				<Title>

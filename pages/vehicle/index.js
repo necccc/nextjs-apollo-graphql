@@ -26,8 +26,7 @@ class Vehicle extends React.Component {
 			<DetailPage>
 				<Breadcrumbs items={[
 					{ path: '/', label: 'Home'},
-					{ path: '/vehicles', label: 'Vehicles'},
-					{ path: '/vehicle/:id', params: { id: Vehicle.id }, label: Vehicle.name }
+					{ path: '/vehicles', label: 'Vehicles'}
 				]} />
 
 				<Title>

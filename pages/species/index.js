@@ -46,14 +46,13 @@ class Species extends React.Component {
 		const { relatedPeople } = this.state
 
 		return <Layout>
-				<Head>
-        		<title>{Species.name} - Star Wars Library</title>
-      		</Head>
+			<Head>
+				<title>{Species.name} - Star Wars Library</title>
+			</Head>
 			<DetailPage>
 				<Breadcrumbs items={[
 					{ path: '/', label: 'Home'},
-					{ path: '/species', label: 'Species'},
-					{ path: `/species/:id`, params: { id: Species.id }, label: Species.name }
+					{ path: '/species', label: 'Species'}
 				]} />
 
 				<Title>
@@ -81,7 +80,7 @@ class Species extends React.Component {
 								first={ relatedPeople.first }
 								offset={ relatedPeople.offset }
 								data={ Species.people }
-								total={ Species._peopleMeta.count }
+								total={ Species.peopleCount }
 								loadMore={ () => this.loadMore() }
 								skip={ relatedPeople.skip }
 							/>

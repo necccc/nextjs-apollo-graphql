@@ -25,8 +25,7 @@ class Person extends React.Component {
 			<DetailPage>
 				<Breadcrumbs items={[
 					{ path: '/', label: 'Home'},
-					{ path: '/people', label: 'People'},
-					{ path: '/person/:id', params: { id: Person.id }, label: Person.name }
+					{ path: '/people', label: 'People'}
 				]} />
 
 				<Title>

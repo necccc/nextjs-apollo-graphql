@@ -25,8 +25,7 @@ class Planet extends React.Component {
 			<DetailPage>
 				<Breadcrumbs items={[
 					{ path: '/', label: 'Home'},
-					{ path: '/planets', label: 'Planets'},
-					{ path: `/planet/:id`, params: { id: Planet.id }, label: Planet.name }
+					{ path: '/planets', label: 'Planets'}
 				]} />
 
 				<Title>
