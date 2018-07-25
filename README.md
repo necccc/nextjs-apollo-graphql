@@ -9,7 +9,7 @@ The project builds on:
 - [Express](https://expressjs.com/)
 - [Apollo GraphQL Client](https://www.apollographql.com/docs/react/)
 - [React](https://reactjs.org/)
-- [A GraphQL server](https://github.com/necccc/starwars-graphql) running with [Apollo Engine](https://www.apollographql.com/engine)
+- [A GraphQL server](https://github.com/necccc/starwars-graphql) running with [Apollo Server](https://www.apollographql.com/server) & [Engine](https://www.apollographql.com/engine)
 - [Carbon Design System by IBM](http://www.carbondesignsystem.com/)
 - [Star Wars visual guide](https://starwars-visualguide.com/), which seems to be using the SWAPI too, but has images!
 
