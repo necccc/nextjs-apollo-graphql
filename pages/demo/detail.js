@@ -21,11 +21,11 @@ const List = (props) => (<div>
 		props.loading ? 'LOADING' : ''
 	}
 	<ul>
-		{
-			props.data.map( item => (<li key={item.id}>
+		{props.data.map( item => (
+			<li key={item.id}>
 				{item.name}
-			</li>))
-		}
+			</li>
+		))}
 	</ul>
 	<button onClick={e => props.loadPage(props.page + 1) }>Load Page {props.page + 1}</button>
 </div>)
@@ -64,23 +64,3 @@ export default graphql(getStarships, {
 		return Object.assign({}, ownProps, newProps)
 	}
 })(List)
-
-
-
-/*
-
-console.log(page);
-
-
-				return fetchMore({
-					variables: {
-						page
-					},
-					updateQuery: (prev, { variables, fetchMoreResult }) => {
-	
-							if (!fetchMoreResult) return prev;
-	
-							return Object.assign({}, fetchMoreResult)
-						}
-				})
-				*/

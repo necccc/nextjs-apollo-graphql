@@ -1,5 +1,7 @@
 FROM node:10.5-alpine
+
 LABEL name "starwars-app"
+
 ARG app_path=/opt/local/app
 
 COPY . $app_path

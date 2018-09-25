@@ -7,7 +7,7 @@ const assetPrefix = isProd ? process.env.ASSET_URL : ''
 
 module.exports = withTM(withSass({
 
-	port: process.env.APP_PORT,
+	port: process.env.APP_PORT || 80,
 
 	transpileModules: [],
 
@@ -29,6 +29,4 @@ module.exports = withTM(withSass({
 	useFileSystemPublicRoutes: false,
 
 	assetPrefix,
-
-	exportPathMap: routing,
 }))

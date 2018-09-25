@@ -11,7 +11,10 @@ const routes = {
 	'/planet/:id': 'planet',
 	'/species': 'specieslist',
 	'/species/:id': 'species',
-	'/demo': 'demo'
+	'/demo/pagination': 'demo/pagination',
+	'/demo/list': 'demo/list',
+	'/demo/detail': 'demo/detail',
+	'/demo/subtree': 'demo/subtree',
 }
 
 module.exports = () => routes
